@@ -37,9 +37,9 @@ function Video() {
 <div>
   <Navbar />
 
-  <div className='w-full flex flex-col md:flex-row-reverse max-sm:flex-col-reverse max-md:flex-col-reverse'> 
+  <div className='w-full flex flex-col md:flex-row-reverse max-sm:flex-col-reverse max-md:flex-col-reverse '> 
   
-    <ul className='w-full md:w-[30%] mt-8'>  
+    <ul className='w-full md:w-[30%] mt-8  '>  
       <Advertisement />
       {videos.map((video) => (
         <li key={video.id} className='flex mt-3'>
@@ -48,14 +48,14 @@ function Video() {
             src={video.snippet.thumbnails.medium.url}
             onClick={() => window.location.href = `/video/${video.id}`}  
           />
-          <h2 className='w-[30vh] overflow-hidden text-ellipsis whitespace-nowrap'>{video.snippet.title}</h2> 
+          <h2 className='w-[30vh] overflow-hidden text-ellipsis '>{video.snippet.title}</h2> 
         </li>
       ))}
     </ul>
 
-    <div className='rounded-[12px] w-full md:w-[70%] flex flex-col items-center mt-6'>  
+    <div className='rounded-[12px] w-full md:w-[70%] flex flex-col items-center mt-6 '>  
       {videoData && (
-        <div className='flex flex-col w-full md:w-[95%]'>
+        <div className='flex flex-col w-full md:w-[95%] '>
           <iframe
             className='rounded-[12px] w-full h-[50vh] md:h-[75vh]'  
             src={`https://www.youtube.com/embed/${id}`}
