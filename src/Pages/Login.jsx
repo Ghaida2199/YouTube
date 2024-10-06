@@ -65,7 +65,7 @@ function Login() {
                   src="https://lh6.googleusercontent.com/4DxCCiITqnh90BCQdPFShKb1CWi7QLdOrHABF0_LcqHUla_b99FnCECQEEOvMbxQiV-vprk16-0uiipp1Hl3SH1Dk-aRlIQbUPbWEtUQXccWaZsaeonnT_3MKN1HqM9THIKQRnt6W5E5xl4GaTbyXOI"
                   alt="Login"
                 />
-                <h1 className="font-bold text-xl">Sign up</h1>
+                <h1 className="font-bold text-xl">Log in</h1>
                 <h1>Use Your Google Account</h1>
               </div>
             </div>
