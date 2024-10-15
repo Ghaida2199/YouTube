@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Navbar from '../Component/Navbar';
 import { Link } from 'react-router-dom';
+import Sidebar from '../Component/Sidebar';
 
 function Homepage() {
   const [videos, setVideos] = useState([]); // لتخزين قائمة الفيديوهات
@@ -28,7 +29,31 @@ function Homepage() {
   return (
 <div>
   <Navbar />
-  <div className='w-full'>
+  {/* <div className='flex justify-end items-end'>
+  <div className='flex justify-around w-[100%] max-md:flex-wrap'>
+    <button className="btn btn-active btn-sm mt-4 max-md:w-[15vw] max-md:h-[5vh] text-white bg-black">All</button>
+    <button className="btn btn-sm mt-4 max-md:w-[15vw] max-md:h-[5vh] bg-[#e5e5e5]">Music</button>
+    <button className="btn btn-sm mt-4 max-md:w-[15vw] max-md:h-[5vh] bg-[#e5e5e5]">SpaceX</button>
+    <button className="btn btn-sm mt-4 max-md:w-[15vw] max-md:h-[5vh] bg-[#e5e5e5]">Outer space</button>
+    <button className="btn btn-sm mt-4 max-md:w-[15vw] max-md:h-[5vh] bg-[#e5e5e5]">Rotana</button>
+    <button className="btn btn-sm mt-4 max-md:w-[15vw] max-md:h-[5vh] bg-[#e5e5e5]">React routers</button>
+    <button className="btn btn-sm mt-4 max-md:w-[15vw] max-md:h-[5vh] bg-[#e5e5e5]">Podcasts</button>
+    <button className="btn btn-sm mt-4 max-md:w-[15vw] max-md:h-[5vh] bg-[#e5e5e5]">Aircrafts</button>
+    <button className="btn btn-sm mt-4 max-md:w-[15vw] max-md:h-[5vh] bg-[#e5e5e5]">Mixes</button>
+    <button className="btn btn-sm mt-4 max-md:w-[15vw] max-md:h-[5vh] bg-[#e5e5e5]">Arabic Music</button>
+    <button className="btn btn-sm mt-4 max-md:w-[15vw] max-md:h-[5vh] bg-[#e5e5e5]">Science and Faith</button>
+    <button className="btn btn-sm mt-4 max-md:w-[15vw] max-md:h-[5vh] bg-[#e5e5e5]">Ai</button>
+    <button className="btn btn-sm mt-4 max-md:w-[15vw] max-md:h-[5vh] bg-[#e5e5e5]">Live</button>
+    <button className="btn btn-sm mt-4 max-md:w-[15vw] max-md:h-[5vh] bg-[#e5e5e5]">Computers</button>
+  </div>
+</div> */}
+
+ <div>
+
+    </div>
+  <div className='flex  justify-end items-end'>
+   
+<div className=' w-[100%]'>
     <ul className='flex flex-wrap justify-center'>
       {videos.map((video) => (
         <li key={video.id} className='flex flex-col mt-3 w-full sm:w-1/2 md:w-1/3 lg:w-1/4 p-2'> {/* تغيير الأبعاد حسب حجم الشاشة */}
@@ -41,9 +66,13 @@ function Homepage() {
             />
           </Link>
           <h2 className='mt-2 text-center text-sm md:text-base'>{video.snippet.title}</h2> {/* إضافة تباعد بين الصورة والعنوان وتوسيع العنوان */}
+        
+
         </li>
       ))}
     </ul>
+</div>
+  
   </div>
 </div>
 

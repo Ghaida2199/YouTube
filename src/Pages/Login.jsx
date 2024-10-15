@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { useNavigate } from 'react-router-dom'; // استيراد useNavigate
 
 function Login() {
@@ -20,9 +20,23 @@ function Login() {
       alert('Password must be at least 8 characters.');
       return;
     }
+    fetch('https://66e7e69bb17821a9d9da6eab.mockapi.io/login', {
+      method: 'POST',
+      body: JSON.stringify({
+        username: username,
+        password: password,
+       
+      }),
+      headers: {
+        'Content-type': 'application/json; charset=UTF-8',
+      },
+    })
+      .then((response) => response.json())
+      .then((json) => console.log(json));
 
-    // استعلام لجلب بيانات المستخدمين
-    fetch('https://66ef2b583ed5bb4d0bf2f4ac.mockapi.io/login')
+
+
+     fetch('https://66ef2b583ed5bb4d0bf2f4ac.mockapi.io/login')
       .then((response) => {
         if (!response.ok) {
           throw new Error('Network response was not ok');
